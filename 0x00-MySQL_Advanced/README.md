@@ -4,27 +4,27 @@
 
 _For this project, we expect you to look at this concept:_
 
--   [Advanced SQL](/concepts/555)
+-   [Advanced SQL](https://intranet.alxswe.com/concepts/555)
 
 ## Resources
 
 **Read or watch**:
 
--   [MySQL cheatsheet](/rltoken/8w9di_hk19DIMSBEV3EayQ 'MySQL cheatsheet')
--   [MySQL Performance: How To Leverage MySQL Database Indexing](/rltoken/2GJbZ48zRPA70o2YhTdH7g 'MySQL Performance: How To Leverage MySQL Database Indexing')
--   [Stored Procedure](/rltoken/K180X2OCzb6gzPngjn-EIg 'Stored Procedure')
--   [Triggers](/rltoken/cJ1qA4o-rRm4rWIsqYKSZg 'Triggers')
--   [Views](/rltoken/vHg1z3UAOcWMvOt8xZHeiA 'Views')
--   [Functions and Operators](/rltoken/g-c1m6iljScpi4LeqxBRqQ 'Functions and Operators')
--   [Trigger Syntax and Examples](/rltoken/gLVwKjQfRL0Jr_nWqAS7VQ 'Trigger Syntax and Examples')
--   [CREATE TABLE Statement](/rltoken/X789nJ22H6HVh1uCQPl0lg 'CREATE TABLE Statement')
--   [CREATE PROCEDURE and CREATE FUNCTION Statements](/rltoken/mfrWMt1KL3NHXblJykMgZg 'CREATE PROCEDURE and CREATE FUNCTION Statements')
--   [CREATE INDEX Statement](/rltoken/oCu8Rg9WfKyF4BhTt8dZGQ 'CREATE INDEX Statement')
--   [CREATE VIEW Statement](/rltoken/FEZNlZFKZmD1ISnLINkCwQ 'CREATE VIEW Statement')
+-   [MySQL cheatsheet](https://intranet.alxswe.com/rltoken/8w9di_hk19DIMSBEV3EayQ 'MySQL cheatsheet')
+-   [MySQL Performance: How To Leverage MySQL Database Indexing](https://intranet.alxswe.com/rltoken/2GJbZ48zRPA70o2YhTdH7g 'MySQL Performance: How To Leverage MySQL Database Indexing')
+-   [Stored Procedure](https://intranet.alxswe.com/rltoken/K180X2OCzb6gzPngjn-EIg 'Stored Procedure')
+-   [Triggers](https://intranet.alxswe.com/rltoken/cJ1qA4o-rRm4rWIsqYKSZg 'Triggers')
+-   [Views](https://intranet.alxswe.com/rltoken/vHg1z3UAOcWMvOt8xZHeiA 'Views')
+-   [Functions and Operators](https://intranet.alxswe.com/rltoken/g-c1m6iljScpi4LeqxBRqQ 'Functions and Operators')
+-   [Trigger Syntax and Examples](https://intranet.alxswe.com/rltoken/gLVwKjQfRL0Jr_nWqAS7VQ 'Trigger Syntax and Examples')
+-   [CREATE TABLE Statement](https://intranet.alxswe.com/rltoken/X789nJ22H6HVh1uCQPl0lg 'CREATE TABLE Statement')
+-   [CREATE PROCEDURE and CREATE FUNCTION Statements](https://intranet.alxswe.com/rltoken/mfrWMt1KL3NHXblJykMgZg 'CREATE PROCEDURE and CREATE FUNCTION Statements')
+-   [CREATE INDEX Statement](https://intranet.alxswe.com/rltoken/oCu8Rg9WfKyF4BhTt8dZGQ 'CREATE INDEX Statement')
+-   [CREATE VIEW Statement](https://intranet.alxswe.com/rltoken/FEZNlZFKZmD1ISnLINkCwQ 'CREATE VIEW Statement')
 
 ## Learning Objectives
 
-At the end of this project, you are expected to be able to [explain to anyone](/rltoken/NEA0Fr7muHfukl5lziVAhg 'explain to anyone'), **without the help of Google**:
+At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/NEA0Fr7muHfukl5lziVAhg 'explain to anyone'), **without the help of Google**:
 
 ### General
 
