@@ -18,23 +18,45 @@ You can use this dump as data sample: dump.zip
 
 
 import pymongo
-from pymongo import MongoClient
 
 
-def log_nginx_stats(mongo_collection):
-    """provides some stats about Nginx logs"""
-    print(f"{mongo_collection.estimated_document_count()} logs")
+def count_logs(collection):
+    """Count number of logs"""
+    return collection.count_documents({})
 
-    print("Methods:")
-    for method in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
-        count = mongo_collection.count_documents({"method": method})
-        print(f"\tmethod {method}: {count}")
 
-    number_of_gets = mongo_collection.count_documents(
-        {"method": "GET", "path": "/status"})
-    print(f"{number_of_gets} status check")
+def count_methods(collection):
+    """Count number of logs with different HTTP methods"""
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    counts = []
+    for method in methods:
+        count = collection.count_documents({"method": method})
+        counts.append(count)
+    return counts
+
+
+def get_status_check(collection):
+    """Count number of logs with method=GET and path=/status"""
+    return collection.count_documents({"method": "GET", "path": "/status"})
 
 
 if __name__ == "__main__":
-    mongo_collection = MongoClient('mongodb://127.0.0.1:27017').logs.nginx
-    log_nginx_stats(mongo_collection)
+    # Create connection to MongoDB
+    client = pymongo.MongoClient()
+    # Choose database and collection
+    db = client.logs
+    collection = db.nginx
+    # Count number of logs
+    num_logs = count_logs(collection)
+    print(f"{num_logs} logs")
+    # Count number of logs with each HTTP method
+    methods_counts = count_methods(collection)
+    print("Methods:")
+    print(f"\tmethod GET: {methods_counts[0]}")
+    print(f"\tmethod POST: {methods_counts[1]}")
+    print(f"\tmethod PUT: {methods_counts[2]}")
+    print(f"\tmethod PATCH: {methods_counts[3]}")
+    print(f"\tmethod DELETE: {methods_counts[4]}")
+    # Count number of logs with method=GET and path=/status
+    num_status_checks = get_status_check(collection)
+    print(f"{num_status_checks} status check")
