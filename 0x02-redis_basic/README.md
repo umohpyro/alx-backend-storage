@@ -7,10 +7,10 @@ Resources
 
 **Read or watch:**
 
-*   [Redis commands](/rltoken/lQ8ANhVfxDTxDr2UDSyQRA "Redis commands")
-*   [Redis python client](/rltoken/imfgFhAZPlg7YMZ_tHvFZw "Redis python client")
-*   [How to Use Redis With Python](/rltoken/7SluvFvgckwVgsvrfOf1CQ "How to Use Redis With Python")
-*   [Redis Crash Course Tutorial](/rltoken/hJVo3XwMMFFoApyX8zPXvA "Redis Crash Course Tutorial")
+*   [Redis commands](https://intranet.alxswe.com/rltoken/lQ8ANhVfxDTxDr2UDSyQRA "Redis commands")
+*   [Redis python client](https://intranet.alxswe.com/rltoken/imfgFhAZPlg7YMZ_tHvFZw "Redis python client")
+*   [How to Use Redis With Python](https://intranet.alxswe.com/rltoken/7SluvFvgckwVgsvrfOf1CQ "How to Use Redis With Python")
+*   [Redis Crash Course Tutorial](https://intranet.alxswe.com/rltoken/hJVo3XwMMFFoApyX8zPXvA "Redis Crash Course Tutorial")
 
 Learning Objectives
 -------------------
