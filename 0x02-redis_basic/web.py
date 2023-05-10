@@ -1,32 +1,57 @@
 #!/usr/bin/env python3
-""" Redis Module """
+
+"""
+This module provides the class Cache
+"""
 
 from functools import wraps
 import redis
 import requests
-from typing import Callable
+import requests_html
+import typing
 
-redis_ = redis.Redis()
 
+def counter(method: typing.Callable):
+    """
+    Counts the calls to the input method
+    """
 
-def count_requests(method: Callable) -> Callable:
-    """ Decortator for counting """
     @wraps(method)
-    def wrapper(url):  # sourcery skip: use-named-expression
-        """ Wrapper for decorator """
-        redis_.incr(f"count:{url}")
-        cached_html = redis_.get(f"cached:{url}")
-        if cached_html:
-            return cached_html.decode('utf-8')
-        html = method(url)
-        redis_.setex(f"cached:{url}", 10, html)
-        return html
-
-    return wrapper
+    def count(self, url: str, *args, **kwargs) -> typing.Callable:
+        """
+        Caches the counts of visits to url
+        """
+        key = 'count:' + url
+        self._redis.incr(key)
+        self._redis.expire(key, 10)
+        return counter(url, *args, **kwargs)
+    return count
 
 
-@count_requests
-def get_page(url: str) -> str:
-    """ Obtain the HTML content of a  URL """
-    req = requests.get(url)
-    return req.text
+class Cache:
+    """
+    This class queries a webpage and monitors the number of visits to it
+    """
+
+    def __init__(self):
+        """
+        Initialize class
+        """
+        self._redis = redis.Redis()
+        self._redis.flushdb()
+
+    @counter
+    def get_page(self, url: str) -> str:
+        """
+        This function ses the requests module to obtain
+        the HTML content of a particular URL and returns it
+        """
+        response = requests.get(url)
+        return response.text
+
+
+if __name__ == '__main__':
+    url = 'http://slowwly.robertomurray.co.uk'
+    cache = Cache()
+    print(cache)
+    cache.get_page(url)
